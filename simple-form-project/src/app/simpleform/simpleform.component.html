@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <form>
+                <div class="form-group elements">
+                  <input type="text" name="userName" class="form-control" placeholder="Enter Your Name" [(ngModel)]="userName">
+                </div>
+                <div class="form-group elements">
+                  <input type="text" name="userEmail" class="form-control" placeholder="Enter Your Email" [(ngModel)]="userEmail">
+                  <p class="error">{{emailErrorMessage}}</p>
+                </div>
+                <div class="form-group elements">
+                  <input type="password" name="userPassword" class="form-control" placeholder="Enter Your Password" [(ngModel)]="userPassword">
+                  <p class="error">{{passwordErrorMessage}}</p>
+                </div>
+                <div class="elements">
+                    <button class="btn btn-primary" 
+                    [disabled]="userName === '' || userEmail === '' || userPassword === ''" (click)="onSubmitButton()">Submit</button>
+                    <button class="btn btn-primary" [disabled]="!userDetails" (click)="onResetButton()">Reset</button>
+                </div>
+            </form>
+            <hr>
+            <div *ngIf="userDetails">
+                <h2>{{userName | uppercase}}</h2>
+                <h2>{{userEmail | uppercase}}</h2>
+                <h2>{{userPassword | uppercase}}</h2>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
