@@ -39,9 +39,7 @@ export class SimpleformComponent {
     this.userName = ''
     this.userEmail = ''
     this.userPassword = ''
-
     this.userDetails = false
-
     this.emailErrorMessage = ''
     this.passwordErrorMessage = ''
   }
