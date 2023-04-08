@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder="Enter Server Name" name="serverStatus" [(ngModel)]="serverName">
+            <br>
+            <button class="btn btn-primary" (click)="onCreateServer()">Create</button>
+        </div>
+        <hr>
+        <app-single-server *ngFor="let server of serverList"></app-single-server>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
